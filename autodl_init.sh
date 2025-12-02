@@ -22,7 +22,7 @@ while true; do
 	case $choice in
 	1)
 		echo "Updating apt..."
-		apt update && apt upgrade -y
+		apt update
 		echo "Apt update completed."
 		;;
 	2)

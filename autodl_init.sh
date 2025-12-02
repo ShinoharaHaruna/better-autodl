@@ -19,55 +19,55 @@ C_CYAN='\033[0;36m'
 # Functions / 函数定义
 # ==============================================================================
 
-# Function: Print a message and wait for user to press Enter
-# 功能: 打印消息并等待用户按下回车键
+# Print a message and wait for user to press Enter
+# 打印消息并等待用户按下回车键
 function press_enter_to_continue() {
 	echo -e "${C_CYAN}按下回车键以继续...${C_RESET}"
 	read -r
 }
 
-# Function: Update apt
-# 功能: 更新 apt
+# Update apt
+# 更新 apt
 function update_apt() {
 	echo -e "${C_BLUE}正在更新 apt...${C_RESET}"
 	apt update
 	echo -e "${C_GREEN}apt 更新完成。${C_RESET}"
 }
 
-# Function: Install zsh
-# 功能: 安装 zsh
+# Install zsh
+# 安装 zsh
 function install_zsh() {
 	echo -e "${C_BLUE}正在安装 zsh...${C_RESET}"
 	apt install zsh -y
 	echo -e "${C_GREEN}zsh 安装完成。${C_RESET}"
 }
 
-# Function: Install tools
-# 功能: 安装工具包
+# Install tools
+# 安装工具包
 function install_tools() {
 	echo -e "${C_BLUE}正在安装 curl, wget, tree, tmux...${C_RESET}"
 	apt install curl wget tree tmux -y
 	echo -e "${C_GREEN}工具包安装完成。${C_RESET}"
 }
 
-# Function: Install Oh My Zsh
-# 功能: 安装 Oh My Zsh
+# Install Oh My Zsh
+# 安装 Oh My Zsh
 function install_omz() {
 	echo -e "${C_BLUE}正在安装 Oh My Zsh...${C_RESET}"
 	sh -c "$(curl -fsSL https://gitee.com/mirrors/oh-my-zsh/raw/master/tools/install.sh)"
 	echo -e "${C_GREEN}Oh My Zsh 安装完成。${C_RESET}"
 }
 
-# Function: Install Powerlevel10k
-# 功能: 安装 Powerlevel10k
+# Install Powerlevel10k
+# 安装 Powerlevel10k
 function install_p10k() {
 	echo -e "${C_BLUE}正在安装 Powerlevel10k...${C_RESET}"
 	git clone --depth=1 https://gitee.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 	echo -e "${C_GREEN}Powerlevel10k 安装完成。${C_RESET}"
 }
 
-# Function: Install zsh-autosuggestions
-# 功能: 安装 zsh-autosuggestions
+# Install zsh-autosuggestions
+# 安装 zsh-autosuggestions
 function install_autosuggestions() {
 	echo -e "${C_BLUE}正在安装 zsh-autosuggestions...${C_RESET}"
 	git clone https://gitee.com/mirrors/zsh-autosuggestions.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
@@ -75,16 +75,16 @@ function install_autosuggestions() {
 	echo -e "${C_YELLOW}注意: 安装后，请在 ~/.zshrc 文件的 plugins 数组中添加 'zsh-autosuggestions' 以启用插件。${C_RESET}"
 }
 
-# Function: Install uv
-# 功能: 安装 uv
+# Install uv
+# 安装 uv
 function install_uv() {
 	echo -e "${C_BLUE}正在安装 uv...${C_RESET}"
 	curl -LsSf https://astral.sh/uv/install.sh | sh
 	echo -e "${C_GREEN}uv 安装完成。${C_RESET}"
 }
 
-# Function: Print the menu
-# 功能: 打印菜单
+# Print the menu
+# 打印菜单
 function print_menu() {
 	echo -e "${C_PURPLE}============ AutoDL 环境初始化脚本 ============${C_RESET}"
 	echo " "

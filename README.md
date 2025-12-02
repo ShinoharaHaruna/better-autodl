@@ -6,7 +6,7 @@ This is a Shell script for quickly initializing the AutoDL environment. The scri
 
 The script provides the following options, selected by entering a number:
 
-1. **Update apt**: Executes `apt update && apt upgrade -y`
+1. **Update apt**: Executes `apt update`
 2. **Install zsh**: Executes `apt install zsh -y`
 3. **Install Toolkit**: Installs curl, wget, tree, tmux: `apt install curl wget tree tmux -y`
 4. **Install Oh My Zsh**: Installs Oh My Zsh using a Gitee mirror
